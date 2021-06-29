@@ -14,7 +14,7 @@ npm run serve
 
 ### Wireframe
 
-![Wireframe](https://github.com/[vasmarm]/[UpVote]/blob/[main]/Wireframe.jpngpg?raw=true)
+![Wireframe](https://github.com/[vasmarm]/[UpVote]/blob/[main]/Wireframe.png?raw=true)
 
 ### Compiles and minifies for production
 
