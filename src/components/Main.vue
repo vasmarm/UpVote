@@ -45,12 +45,13 @@ export default {
 .combine {
   display: flex; 
   flex-grow: grow;
+  justify-content: space-between;
 }
 .groupContainer {
   overflow: auto;
   display: flex;
   justify-content: start;
-  min-width: 1020px;
+  min-width: 400px;
   max-height: 75px;
   background: rgb(252, 250, 250);
   border: 4px solid rgb(209, 203, 203);

@@ -42,7 +42,7 @@ body {
 }
 .outerContainer {
   justify-content: center;
-  width: 1200px;
+  max-width: 800px;
   margin: 30 px auto;
   overflow: auto;
   min-height: 300px;
