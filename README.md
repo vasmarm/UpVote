@@ -14,7 +14,7 @@ npm run serve
 
 ### Wireframe
 
-![Wireframe](<![Wireframe](Wireframe.png)>)
+![Wireframe](blob/Wireframe.png)
 
 ### Compiles and minifies for production
 
