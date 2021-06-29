@@ -14,7 +14,7 @@ npm run serve
 
 ### Wireframe
 
-![Wireframe](https://github.com/[vasmarm]/[UpVote]/blob/[main]/Wireframe.png?raw=true)
+![Wireframe](<![Wireframe](Wireframe.png)>)
 
 ### Compiles and minifies for production
 
