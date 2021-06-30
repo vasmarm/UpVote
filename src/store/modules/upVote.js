@@ -1,4 +1,3 @@
-
 const state = {
     upVotes: [
         {
@@ -20,20 +19,21 @@ const state = {
 };
 
 const getters = {
-    allUpVotes: state => state.upVotes
+    allUpVotes: (state) => state.upVotes
 };
 
 const actions = {
     addUpVote({ commit }, id) {
-        commit('addVote', id)
+        commit('addVote', id);
     },
     toggleUpVote({ commit }, id) {
-        commit('toggleVote', id)
+        commit('toggleVote', id);
     }
 };
 
 const mutations = {
-    addVote: (state, id) => state.upVotes = state.upVotes.map(item => {
+    addVote: (state, id) =>
+    (state.upVotes = state.upVotes.map((item) => {
         if (item.id === id) {
             const newItem = { ...item };
             const existingCount = item.votesCount;
@@ -41,8 +41,9 @@ const mutations = {
             return newItem;
         }
         return item;
-    }),
-    toggleVote: (state, id) => state.upVotes = state.upVotes.map(item => {
+    })),
+    toggleVote: (state, id) =>
+    (state.upVotes = state.upVotes.map((item) => {
         if (item.id === id) {
             const newItem = { ...item };
             const existingSelected = item.selected;
@@ -50,7 +51,7 @@ const mutations = {
             return newItem;
         }
         return item;
-    }),
+    }))
 };
 
 export default {
@@ -58,4 +59,4 @@ export default {
     getters,
     actions,
     mutations
-}
+};
