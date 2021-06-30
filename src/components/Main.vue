@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="combine" v-for="group in allUpVotes" v-bind:key="group.id">
+    <div class="combine" v-for="group in allUpVotes" :key="group.id">
       <div class="groupContainer">
-        <div v-for="element in group.votesCount" v-bind:key="element">
+        <div v-for="element in group.votesCount" :key="element">
           <UpVote
             v-bind:id="group.id"
             :selected="group.selected"
