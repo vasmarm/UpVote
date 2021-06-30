@@ -44,7 +44,6 @@ const mutations = {
             }),
     toggleVote: (state, id) => state.upVotes = state.upVotes.map(item => {
         if (item.id === id) {
-            console.log(id)
             const newItem = { ...item };
             const existingSelected = item.selected;
             newItem.selected = !existingSelected;

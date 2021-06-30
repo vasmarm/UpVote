@@ -20,9 +20,6 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
   name: "Main",
   computed: mapGetters(['allUpVotes']),
-  created() {
-    console.log(this.allUpVotes);
-  },
   props: {
       
   },

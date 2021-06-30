@@ -9,9 +9,6 @@
 
 export default {
   name: "UpVote",
-  created() {
-    console.log("CHILD", this.id, this.selected);
-  },
   props: {
       id: Number,
       upVoteClick: Function,
