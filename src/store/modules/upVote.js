@@ -34,14 +34,14 @@ const actions = {
 
 const mutations = {
     addVote: (state, id) => state.upVotes = state.upVotes.map(item => {
-            if (item.id === id) {
-                const newItem = { ...item };
-                const existingCount = item.votesCount;
-                newItem.votesCount = existingCount + 1;
-                return newItem;
-            }
-            return item;
-            }),
+        if (item.id === id) {
+            const newItem = { ...item };
+            const existingCount = item.votesCount;
+            newItem.votesCount = existingCount + 1;
+            return newItem;
+        }
+        return item;
+    }),
     toggleVote: (state, id) => state.upVotes = state.upVotes.map(item => {
         if (item.id === id) {
             const newItem = { ...item };
@@ -50,7 +50,7 @@ const mutations = {
             return newItem;
         }
         return item;
-        }),
+    }),
 };
 
 export default {

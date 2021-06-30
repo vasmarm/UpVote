@@ -1,26 +1,26 @@
 <template>
-<div>
-  <div class="heading">
-    <h1> UpVote </h1>
-  </div>
-  <div class="topContainer">
-    <div class="outerContainer">
-      <div class="mainContainer">
-        <Main />
+  <div>
+    <div class="heading">
+      <h1>UpVote</h1>
+    </div>
+    <div class="topContainer">
+      <div class="outerContainer">
+        <div class="mainContainer">
+          <Main />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import Main from './components/Main.vue'
+import Main from './components/Main.vue';
 export default {
   name: 'App',
   components: {
-    Main,
+    Main
   }
-}
+};
 </script>
 <style>
 * {
@@ -30,11 +30,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .topContainer {
   display: flex;

@@ -1,46 +1,48 @@
 <template>
-    <div>
-      <div class="combine" v-for="group in allUpVotes" :key="group.id" >
-          <div class="groupContainer" >
-            <div v-for="element in group.votesCount" :key="element">
-              <UpVote v-bind:id="group.id" :selected="group.selected" :upVoteClick="handleUpVoteClick"/>
-            </div>
-          </div>
-          <button class="addContainer" @click="handleAddVoteClick(group.id)">
-        <img src="../assets/add-filled.svg" alt="add"/>
-      </button>
+  <div>
+    <div class="combine" v-for="group in allUpVotes" :key="group.id">
+      <div class="groupContainer">
+        <div v-for="element in group.votesCount" :key="element">
+          <UpVote
+            v-bind:id="group.id"
+            :selected="group.selected"
+            :upVoteClick="handleUpVoteClick"
+          />
+        </div>
       </div>
+      <button class="addContainer" @click="handleAddVoteClick(group.id)">
+        <img src="../assets/add-filled.svg" alt="add" />
+      </button>
     </div>
+  </div>
 </template>
 
 <script>
-import UpVote from './UpVote.vue'
+import UpVote from './UpVote.vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: "Main",
+  name: 'Main',
   computed: mapGetters(['allUpVotes']),
-  props: {
-      
-  },
+  props: {},
   components: {
-    UpVote,
+    UpVote
   },
   methods: {
-      ...mapActions(['addUpVote', 'toggleUpVote']),
-      handleAddVoteClick(id) {
-          this.addUpVote(id);
-      },
-      handleUpVoteClick(id) {
-        this.toggleUpVote(id);
-      }
+    ...mapActions(['addUpVote', 'toggleUpVote']),
+    handleAddVoteClick(id) {
+      this.addUpVote(id);
+    },
+    handleUpVoteClick(id) {
+      this.toggleUpVote(id);
+    }
   }
 };
 </script>
 
 <style>
 .combine {
-  display: flex; 
+  display: flex;
   flex-grow: grow;
   justify-content: space-between;
 }
@@ -62,7 +64,7 @@ export default {
   border-radius: 15px;
   padding: 10px;
   margin-top: 15px;
-  margin-left: 100px; 
+  margin-left: 100px;
   cursor: pointer;
 }
 </style>
